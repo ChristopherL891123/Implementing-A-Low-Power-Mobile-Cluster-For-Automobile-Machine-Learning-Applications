@@ -24,7 +24,7 @@ def sendFiles():
         folderToScp = sys.argv[5]
         fileList = [image for image in os.listdir(folderToScp)]
 	# SCP ENTIRE DIRECTORY HERE
-        send = subprocess.run(["scp","-r", senderImgAddr, recieverImgAddr])
+        send = subprocess.run(["ssh",sender,";","scp","-r", senderImgAddr, recieverImgAddr])
         log.write("FILE SENT")
         
         
