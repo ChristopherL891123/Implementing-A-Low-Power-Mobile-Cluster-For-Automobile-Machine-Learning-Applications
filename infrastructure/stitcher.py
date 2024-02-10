@@ -23,7 +23,7 @@ def stitch():
         outputFilename = node + "_" + str(datetime.now()).replace(" ", "_").replace("-","_").replace(":","_")
 
         if sys.argv[1] == "preliminary":
-            mode = "outPics"
+            mode = "preliminary" # before: outPics
             image_paths = os.listdir("preliminary") # preliminary has the raw images
 
         if sys.argv[1] == "postpreliminary":
